@@ -1,0 +1,163 @@
+body {
+    background-color: #f8fafc;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.booking-provider-section {
+    padding: 80px 0;
+    margin-top: -60px;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.page-header h1 {
+    font-weight: 800;
+    font-size: 3rem;
+    color: #1a1a1a;
+}
+
+.page-header p {
+    font-size: 1.2rem;
+    color: #666;
+    max-width: 700px;
+    margin: 1rem auto 0;
+}
+
+.services-note {
+    font-size: 0.9rem;
+    color: #6c757d;
+    margin-top: 15px;
+    font-style: italic !important;
+}
+
+.shops-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.shop-card {
+    background: white;
+    border-radius: 15px;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+
+.shop-card-content {
+    padding: 2.5rem 1.5rem 1.5rem;
+    text-align: center;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.shop-card-logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 1rem;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.shop-card h5 {
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.shop-card h5 a {
+    color: #1a1a1a;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.shop-card h5 a:hover {
+    color: #ffc107;
+}
+
+.shop-card p {
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+.shop-card .btn-book {
+    background: #ffc107;
+    color: #1a1a1a;
+    padding: 0.7rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    margin-top: auto;
+    border: none;
+}
+
+.shop-card .btn-book:hover {
+    background: #ffca2c;
+}
+
+.empty-state {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 4rem;
+    background: #fff;
+    border-radius: 15px;
+    border: 2px dashed #e2e8f0;
+}
+
+.empty-state i {
+    font-size: 3rem;
+    color: #ced4da;
+    margin-bottom: 1.5rem;
+}
+
+.empty-state h4 {
+    font-weight: 600;
+    color: #6c757d;
+}
+
+.badge-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin-top: 10px;
+    margin-bottom: 8px;
+}
+
+.shop-badge {
+    padding: 2px 8px;
+    border-radius: 8px;
+    font-size: 0.70rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+    white-space: nowrap;
+}
+
+.shop-badge.top-rated i,
+.shop-badge.top-booking i {
+    font-size: 0.70rem !important;
+}
+
+.shop-badge.top-rated {
+    background-color: #ffc107;
+    color: #212529;
+}
+
+.shop-badge.top-booking {
+    background-color: #00A3BF;
+    color: white;
+}

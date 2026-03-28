@@ -1,0 +1,97 @@
+.nearby-shop-item {
+    border: none;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    background-color: #fff;
+}
+
+.nearby-shop-item:hover {
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+}
+
+.shop-info {
+    flex: 1;
+    padding-right: 15px;
+}
+
+.rating-section {
+    margin-bottom: 5px;
+}
+
+.services-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 5px;
+}
+
+.service-item {
+    background-color: #f0f0f0;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    color: #555;
+}
+
+.shop-logo {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    margin-right: 15px;
+    border-radius: 4px;
+}
+
+.shop-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.address-section {
+    margin-bottom: 5px;
+}
+
+.shop-name-link {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s;
+    font-weight: 500;
+}
+
+.shop-name-link:hover {
+    color: #ffc107;
+}
+
+.shop-name-container {
+    display: flex;
+    align-items: center;
+}
+
+.location-accuracy-message {
+    margin-top: 50px !important;
+}
+.nearby-shop{
+    margin-top: 50px;
+}
+
+@media (max-width: 768px) {
+    .shop-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .nearby-shop{
+        margin-top: 20px;
+    }
+    .shop-logo {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    .location-accuracy-message {
+        margin-top: -50px;
+    }
+}

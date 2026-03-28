@@ -1,0 +1,9 @@
+ErrorDocument 403 /../error.php?code=403
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Block direct access to PHP files in this folder
+    RewriteCond %{THE_REQUEST} \s/backend/.*\.php [NC]
+    RewriteRule ^ - [F,L]
+</IfModule>

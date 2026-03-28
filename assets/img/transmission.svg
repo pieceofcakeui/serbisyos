@@ -1,0 +1,12 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="200" height="200" fill="#f0f0f0"/>
+  <!-- Gears -->
+  <circle cx="80" cy="80" r="30" fill="#666"/>
+  <circle cx="120" cy="120" r="30" fill="#666"/>
+  <!-- Gear Teeth -->
+  <path d="M80,50 V110 M50,80 H110" stroke="#444" stroke-width="5"/>
+  <path d="M120,90 V150 M90,120 H150" stroke="#444" stroke-width="5"/>
+  <!-- Text -->
+  <text x="100" y="180" text-anchor="middle" fill="#333" font-size="14">Transmission Service</text>
+</svg>

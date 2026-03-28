@@ -1,0 +1,55 @@
+.inactive-days {
+    font-weight: bold;
+}
+
+.inactive-days.warning {
+    color: #ffc107;
+}
+
+.inactive-days.danger {
+    color: #dc3545;
+}
+
+.search-container {
+    width: 100%;
+    max-width: 100%;
+}
+
+.search-input {
+    width: 100%;
+}
+
+#clearButton {
+    border-left: none;
+}
+
+.input-group>.btn-outline-danger {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+#searchInput:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.user-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #6c757d;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.nav-tabs .nav-link {
+    color: #495057;
+    font-weight: 500;
+}
+
+.nav-tabs .nav-link.active {
+    font-weight: 600;
+}

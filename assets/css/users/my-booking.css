@@ -1,0 +1,352 @@
+.my-booking {
+    margin-top: 0;
+}
+.booking-card {
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    margin-bottom: 15px;
+    overflow: hidden;
+    transition: all 0.2s ease;
+    border: 1px solid #eee;
+}
+.shop-logo-container {
+    width: 60px;
+    height: 60px;
+    border-radius: 6px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.shop-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.status-badge {
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.status-pending {
+    background-color: #FFF3CD;
+    color: #856404;
+}
+
+.status-accept {
+    background-color: #D4EDDA;
+    color: green;
+}
+
+.status-cancelled {
+    background-color: #F8D7DA;
+    color: #721C24;
+}
+
+.status-completed {
+    background-color: #D1ECF1;
+    color: #0C5460;
+}
+
+.action-btn {
+    margin-right: 5px;
+    min-width: 80px;
+    padding: 5px 10px;
+    font-size: 14px;
+}
+
+.vehicle-details {
+    background-color: #f8f9fa;
+    border-radius: 6px;
+    padding: 8px;
+    font-size: 14px;
+}
+
+.booking-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.booking-main-info {
+    display: flex;
+    gap: 10px;
+    flex-grow: 1;
+    min-width: 0;
+}
+
+.booking-text-content {
+    min-width: 0;
+    flex-grow: 1;
+}
+
+.booking-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 2px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    white-space: normal;
+}
+
+@media (max-width: 768px) {
+    .booking-title {
+        font-size: 14px;
+        -webkit-line-clamp: 1;
+    }
+}
+
+@media (max-width: 576px) {
+    .booking-title {
+        font-size: 13px;
+    }
+}
+
+.booking-meta {
+    font-size: 13px;
+    color: #6c757d;
+}
+
+.section-title {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.booking-details {
+    font-size: 14px;
+}
+
+.booking-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 576px) {
+    .booking-header {
+        flex-direction: column;
+    }
+
+    .status-badge {
+        align-self: flex-start;
+    }
+
+    .booking-actions {
+        justify-content: flex-start;
+    }
+
+    .shop-logo-container {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+.confirmation-modal .modal-content {
+    border: none;
+    border-radius: 12px;
+}
+
+.confirmation-modal .modal-body {
+    padding: 2rem;
+    text-align: center;
+}
+
+.confirmation-modal .modal-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.confirmation-modal .modal-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.confirmation-modal .modal-btn {
+    width: 120px;
+    padding: 10px 16px;
+    border-radius: 6px;
+    font-weight: 500;
+    border: none;
+    transition: all 0.2s ease;
+}
+
+.confirmation-modal .modal-buttons form {
+    display: contents;
+}
+
+.confirmation-modal .modal-btn.btn-secondary {
+    background-color: #6c757d;
+    color: white;
+}
+
+.confirmation-modal .modal-btn.btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+.confirmation-modal .modal-btn.btn-danger {
+    background-color: #dc3545;
+    color: white;
+}
+
+.confirmation-modal .modal-btn.btn-danger:hover {
+    background-color: #c82333;
+}
+
+.confirmation-modal .modal-btn.btn-warning {
+    background-color: #ffc107;
+    color: #212529;
+}
+
+.confirmation-modal .modal-btn.btn-warning:hover {
+    background-color: #e0a800;
+}
+
+.booking-details p {
+    margin-bottom: 0.5rem;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; 
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+}
+
+.long-text {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.long-text.collapsed {
+    -webkit-line-clamp: 2; 
+}
+
+.long-text.expanded {
+    -webkit-line-clamp: unset;
+    display: inline;
+}
+.see-more-btn {
+    color: #0d6efd;
+    cursor: pointer;
+    font-size: 0.85rem;
+    display: inline-block;
+    margin-top: 0.25rem;
+}
+
+.see-more-btn:hover {
+    text-decoration: underline;
+}
+.booking-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.booking-actions {
+    margin-top: auto;
+}
+.vehicle-details p:last-child {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* --- CSS FOR STATUS TRACKER --- */
+.status-tracker-container {
+    padding-top: 1rem;
+    margin-top: 1rem;
+    border-top: 1px solid #eee;
+}
+.status-tracker {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    padding: 0;
+    position: relative;
+}
+.status-tracker::before {
+    content: '';
+    position: absolute;
+    top: 15px; 
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #e9ecef;
+    z-index: 1;
+}
+.status-step {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    width: 33.33%;
+}
+.step-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #adb5bd;
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #fff;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+.step-label {
+    font-size: 12px;
+    margin-top: 8px;
+    color: #6c757d;
+}
+.status-step.completed .step-icon {
+    background-color: #198754; 
+}
+.status-step.completed .step-label {
+    color: #212529;
+    font-weight: 500;
+}
+.status-step.active .step-icon {
+    background-color: #0d6efd; 
+    transform: scale(1.2);
+    box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.25);
+}
+.status-step.active .step-label {
+    color: #0d6efd;
+    font-weight: 700;
+}
+.status-message {
+    text-align: center;
+    padding: 10px;
+    background-color: #e9ecef;
+    color: #495057;
+    border-radius: 6px;
+    font-weight: 500;
+}
+.status-cancelled-message {
+    text-align: center;
+    padding: 10px;
+    background-color: #f8d7da;
+    color: #721c24;
+    border-radius: 6px;
+    font-weight: 500;
+}
+
+.status-rejected-message {
+    text-align: center;
+    padding: 10px;
+    background-color: #f8d7da;
+    color: #721c24;
+    border-radius: 6px;
+    font-weight: 500;
+}

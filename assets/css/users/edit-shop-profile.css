@@ -1,0 +1,873 @@
+.edit-shop-profile-main-container {
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid var(--border-color);
+    min-height: calc(100vh - 40px);
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 1rem auto;
+    padding: 1rem;
+    position: relative; 
+    z-index: 1;     
+}
+
+.edit-shop-profile-card-header {
+    position: relative;
+    padding: 30px 30px 0;
+    text-align: center;
+}
+.datetime-buttons {
+    display: flex !important;
+    gap: 10px !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+}
+
+.datetime-buttons button {
+    flex-shrink: 0 !important;
+    min-width: auto !important;
+}
+
+.edit-shop-profile-header-title {
+    font-size: 2.5em;
+    color: #000000;
+    margin-bottom: 10px;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.edit-shop-profile-header-subtitle {
+    color: #666;
+    font-size: 1.1em;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.edit-shop-profile-tab-nav {
+    display: flex;
+    justify-content: center;
+    background: none;
+    border-bottom: 2px solid #e2e8f0;
+    padding: 0;
+    margin: 0 30px 30px;
+    position: relative;
+    border-radius: 0;
+}
+
+.edit-shop-profile-tab-btn {
+    flex: none;
+    padding: 15px 30px;
+    border: none;
+    background: transparent;
+    border-radius: 0;
+    font-weight: 600;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    color: #64748b;
+    position: relative;
+    z-index: 2;
+    font-size: 1.1em;
+}
+
+.edit-shop-profile-tab-btn.edit-shop-profile-active {
+    color: #3b82f6; /* Kulay ng active tab text (asul) */
+}
+
+.edit-shop-profile-tab-indicator {
+    position: absolute;
+    bottom: -2px;
+    height: 3px;
+    background: #3b82f6;
+    border-radius: 0;
+    transition: all 0.3s ease;
+    z-index: 3;
+}
+
+.edit-shop-profile-content-area {
+    flex: 1;
+     padding: 0 15px 15px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.edit-shop-profile-content-area::-webkit-scrollbar {
+    display: none;
+}
+
+.edit-shop-profile-content-area {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.edit-shop-profile-tab-content {
+    display: none;
+    animation: fadeInUp 0.3s ease;
+}
+
+.edit-shop-profile-tab-content.edit-shop-profile-active {
+    display: block;
+}
+
+.edit-shop-profile-shop-avatar-section {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+.edit-shop-profile-shop-avatar {
+    position: relative;
+    display: inline-block;
+}
+
+.edit-shop-profile-avatar-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+
+.edit-shop-profile-avatar-img:hover {
+    transform: scale(1.05);
+    border-color: #ffc107;
+}
+
+.edit-shop-profile-avatar-upload {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    background: #ffc107;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.edit-shop-profile-avatar-upload:hover {
+    background: #764ba2;
+    transform: scale(1.1);
+}
+
+.edit-shop-profile-form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.edit-shop-profile-form-grid-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.edit-shop-profile-form-group {
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.edit-shop-profile-form-group.edit-shop-profile-full-width {
+    grid-column: 1 / -1;
+}
+
+.edit-shop-profile-form-label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+    font-size: 0.95em;
+}
+
+.edit-shop-profile-form-input {
+    width: 100%;
+    padding: 12px 15px; 
+    border: 2px solid #e1e5e9;
+    border-radius: 12px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    background: white;
+}
+
+.edit-shop-profile-social-input-group .edit-shop-profile-form-input {
+    padding-left: 50px;
+}
+
+.edit-shop-profile-form-input:focus {
+    outline: none;
+    border-color: #ffc107;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+    transform: translateY(-2px);
+}
+
+.edit-shop-profile-form-input:disabled {
+    background-color: #f8fafc;
+    color: #94a3b8;
+    cursor: not-allowed;
+}
+
+.edit-shop-profile-form-textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.edit-shop-profile-form-select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+    background-position: right 12px center;
+    background-repeat: no-repeat;
+    background-size: 16px;
+}
+
+.edit-shop-profile-toggle-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background: #f8fafc;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    border: 2px solid #e2e8f0;
+}
+
+.edit-shop-profile-toggle-info {
+    flex: 1;
+}
+
+.edit-shop-profile-toggle-title {
+    font-weight: 600;
+    color: #334155;
+    margin-bottom: 4px;
+}
+
+.edit-shop-profile-toggle-desc {
+    color: #64748b;
+    font-size: 0.9em;
+}
+
+
+.edit-shop-profile-toggle-switch {
+    position: relative !important;
+    width: 60px !important;
+    height: 32px !important;
+    background: #cbd5e1 !important;
+    border-radius: 16px !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+}
+.edit-shop-profile-toggle-switch.edit-shop-profile-active {
+    background: #667eea !important;
+}
+.edit-shop-profile-toggle-slider {
+    position: absolute !important;
+    top: 4px !important;
+    left: 4px !important;
+    width: 24px !important;
+    height: 24px !important;
+    background: white !important;
+    border-radius: 50% !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) !important;
+}
+.edit-shop-profile-toggle-switch.edit-shop-profile-active .edit-shop-profile-toggle-slider {
+    transform: translateX(28px) !important;
+}
+.dynamic-service-item {
+    display: flex !important;
+    align-items: center !important;
+    margin-bottom: 10px !important;
+    gap: 10px !important;
+}
+.remove-service-btn {
+    background-color: #ef4444 !important;
+    color: white !important;
+    border: none !important;
+    width: 30px !important;
+    height: 30px !important;
+    border-radius: 50% !important;
+    cursor: pointer !important;
+    font-weight: bold !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+#add-service-btn {
+    background-color: #3b82f6 !important;
+    color: white !important;
+    border: none !important;
+    padding: 8px 15px !important;
+    border-radius: 8px !important;
+    cursor: pointer !important;
+}
+.collapsible-header {
+    background: #f7fafc !important;
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 8px !important;
+    width: 100% !important;
+    text-align: left !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 12px 16px !important;
+    cursor: pointer !important;
+    margin-top: 20px !important;
+    transition: background-color 0.2s ease !important;
+}
+.collapsible-header:hover {
+    background-color: #edf2f7 !important;
+}
+.collapsible-header h3 {
+    margin: 0 !important;
+    font-size: 1.1rem !important;
+    font-weight: 600 !important;
+}
+.collapsible-icon {
+    transition: transform 0.3s ease !important;
+}
+.collapsible-icon.open {
+    transform: rotate(180deg) !important;
+}
+.collapsible-content {
+    max-height: 0 !important;
+    overflow: hidden !important;
+    transition: max-height 0.4s ease-out !important;
+    background-color: #ffffff !important;
+    border: 1px solid #e2e8f0 !important;
+    border-top: none !important;
+    border-radius: 0 0 8px 8px !important;
+}
+.collapsible-content.open {
+    max-height: 2500px !important;
+    transition: max-height 0.5s ease-in !important;
+}
+.collapsible-content .edit-shop-profile-booking-form,
+.collapsible-content .edit-shop-profile-emergency-form {
+    opacity: 1 !important;
+    max-height: none !important;
+    overflow: visible !important;
+    margin-top: 0 !important;
+    border: none !important;
+    padding: 20px !important;
+}
+
+.edit-shop-profile-booking-form {
+    background: white;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 25px;
+    margin-top: 20px;
+    transition: all 0.5s ease;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+}
+.save-settings-btn {
+    margin-top: -40px;
+}
+
+@media (max-width: 768px) {
+    .save-settings-btn {
+        margin-top: -20px;
+    }
+    #saveSettingsBtn {
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .save-settings-btn {
+        margin-top: -10px;
+    }
+}
+
+
+.edit-shop-profile-booking-form.edit-shop-profile-show {
+    opacity: 1;
+    max-height: 100%;
+    border-color: #ffc107;
+}
+
+.edit-shop-profile-add-datetime-form {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 0.8fr auto;
+    gap: 8px;
+    margin-top: 10px;
+    align-items: center;
+}
+
+.edit-shop-profile-add-datetime-form select,
+.edit-shop-profile-add-datetime-form input {
+    min-width: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.edit-shop-profile-add-datetime-form button {
+    padding: 15px 20px;
+    background: #ffc107;
+    color: white;
+    border-radius: 8px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+
+}
+
+@media (max-width: 992px) {
+    .edit-shop-profile-add-datetime-form {
+        grid-template-columns: 1.5fr 1fr 1fr;
+    }
+    
+    .edit-shop-profile-add-datetime-form select:first-child {
+        grid-column: span 3;
+    }
+    
+    .edit-shop-profile-add-datetime-form button {
+        grid-column: span 3;
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .edit-shop-profile-add-datetime-form {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+    
+    .edit-shop-profile-add-datetime-form select:first-child {
+        grid-column: span 2;
+    }
+    
+    .edit-shop-profile-add-datetime-form button {
+        grid-column: span 2;
+        padding: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .edit-shop-profile-add-datetime-form {
+        grid-template-columns: 1fr;
+    }
+    
+    .edit-shop-profile-add-datetime-form select:first-child,
+    .edit-shop-profile-add-datetime-form button {
+        grid-column: span 1;
+    }
+    
+    .edit-shop-profile-add-datetime-form button {
+        margin-top: 5px;
+    }
+}
+
+input[type="time"] {
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.edit-shop-profile-booking-form h3,
+.edit-shop-profile-booking-form h4 {
+    margin-bottom: 15px;
+    color: #334155;
+}
+
+.edit-shop-profile-booking-form h4 {
+    font-size: 1.1em;
+    margin-top: 20px;
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 10px;
+}
+
+.edit-shop-profile-day-selector {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    background: #f8fafc;
+    padding: 15px;
+    border-radius: 12px;
+    border: 2px solid #e2e8f0;
+}
+
+.edit-shop-profile-day-selector.edit-shop-profile-disabled {
+    background-color: #f8fafc;
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.edit-shop-profile-day-item {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.edit-shop-profile-day-item input[type="checkbox"] {
+    display: none;
+}
+
+.edit-shop-profile-day-item label {
+    padding: 8px 15px;
+    border-radius: 8px;
+    background: #e2e8f0;
+    color: #475569;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.edit-shop-profile-day-item input[type="checkbox"]:checked+label {
+    background: #ffc107;
+    color: white;
+    box-shadow: 0 4px 10px rgba(102, 126, 234, 0.3);
+}
+
+.edit-shop-profile-social-inputs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.edit-shop-profile-social-input-group {
+    position: relative;
+}
+
+.edit-shop-profile-social-input-group svg {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    fill: #94a3b8;
+}
+
+.edit-shop-profile-included-field {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 15px;
+    background-color: #f8fafc;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    font-weight: 500;
+    color: #475569;
+}
+
+.edit-shop-profile-badge-required {
+    background-color: #fecaca;
+    color: #b91c1c;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.75em;
+    font-weight: 700;
+}
+
+.edit-shop-profile-badge-optional {
+    background-color: #e0e7ff;
+    color: #4338ca;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.75em;
+    font-weight: 700;
+}
+
+.edit-shop-profile-dynamic-list-container {
+    margin-bottom: 20px;
+}
+
+.edit-shop-profile-dynamic-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 10px;
+    background-color: #f8fafc;
+    border: 2px solid #e1e5e9;
+    border-radius: 12px;
+    min-height: 60px;
+}
+
+.edit-shop-profile-dynamic-list-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.edit-shop-profile-dynamic-list-item span {
+    flex-grow: 1;
+    color: #334155;
+    font-weight: 500;
+}
+
+.edit-shop-profile-dynamic-list-item .edit-shop-profile-actions button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+    font-size: 1.1em;
+    color: #64748b;
+    transition: color 0.2s;
+}
+
+.edit-shop-profile-dynamic-list-item .edit-shop-profile-actions button:hover {
+    color: #ffc107;
+}
+
+.edit-shop-profile-add-item-form {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.edit-shop-profile-add-item-form input {
+    flex-grow: 1;
+}
+
+.edit-shop-profile-add-item-form button {
+    padding: 0 20px;
+    background: #ffc107;
+    color: white;
+    border-radius: 8px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.edit-shop-profile-add-item-form button:hover {
+    background: #5a67d8;
+}
+
+.edit-shop-profile-add-datetime-form {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr auto;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+
+.edit-shop-profile-btn {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.edit-shop-profile-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.edit-shop-profile-btn:hover::before {
+    left: 100%;
+}
+
+.edit-shop-profile-btn-primary {
+    background-color: #ffc107;
+    color: white;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.edit-shop-profile-btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+}
+
+.edit-shop-profile-btn:disabled {
+    background: #cbd5e1;
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+    opacity: 0.7;
+}
+
+.edit-shop-profile-btn:disabled:hover::before {
+    left: -100%;
+}
+
+.edit-shop-profile-success-message {
+    background: linear-gradient(135deg, #4ade80, #22c55e);
+    color: white;
+    padding: 15px 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: all 0.3s ease;
+}
+
+.edit-shop-profile-success-message.edit-shop-profile-show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 992px) {
+    .edit-shop-profile-info-layout-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .edit-shop-profile-shop-avatar-section {
+        position: static;
+    }
+}
+
+@media (max-width: 768px) {
+  .edit-shop-profile-main-container {
+        width: 100%;
+        margin: 0;
+        border-radius: 0;
+        min-height: 100vh;
+        border-left: none;      
+        border-right: none;    
+        box-sizing: border-box; 
+    }
+    .edit-shop-profile-card-header {
+        padding: 20px 20px 0;
+    }
+    .edit-shop-profile-tab-btn {
+        padding: 12px 15px;
+        font-size: 1em;
+    }
+    .edit-shop-profile-tab-nav {
+        margin: 0 20px 20px;
+    }
+
+    .edit-shop-profile-content-area {
+        padding: 0 20px 20px;
+    }
+
+    .edit-shop-profile-form-grid,
+    .edit-shop-profile-form-grid-3,
+    .edit-shop-profile-social-inputs,
+    .edit-shop-profile-add-datetime-form {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .edit-shop-profile-header-title {
+        font-size: 2em;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.edit-shop-profile-add-item-form-multi {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-top: 15px;
+}
+
+.edit-shop-profile-add-item-form-multi select {
+    flex: 1;
+    min-width: 180px;
+}
+
+.edit-shop-profile-add-item-form-multi button {
+    flex-shrink: 0;
+}
+
+#addEmergencyServiceBtn {
+    padding: 10px 20px;
+}
+
+@media (max-width: 768px) {
+    .edit-shop-profile-add-item-form-multi {
+        justify-content: center;
+    }
+}
+
+
+/* --- BAGONG CSS PARA SA DATETIME FORM --- */
+
+.edit-shop-profile-add-datetime-form {
+  display: grid;
+  /* 5 columns: 
+    - Date: 2 parts ng space
+    - Open: 1 part
+    - Close: 1 part
+    - Slots: 1 part
+    - Buttons: Kukunin yung space na kailangan niya (auto)
+  */
+  grid-template-columns: 2fr 1fr 1fr 1fr auto;
+  gap: 10px;
+  margin-top: 15px;
+  align-items: end; /* I-a-align lahat sa baba para pantay-pantay */
+}
+
+/* Para 'yung "Add" at "Cancel" buttons ay mag-stretch */
+.edit-shop-profile-add-datetime-form .datetime-buttons {
+  display: flex;
+  gap: 8px; /* Space sa pagitan ng Add at Cancel */
+  width: 100%;
+}
+
+/* Responsive styles para sa CSS Grid */
+@media (max-width: 992px) {
+  .edit-shop-profile-add-datetime-form {
+    /* Sa tablet, 3 columns na lang */
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  /* Yung Date (Item 1) ay sakupin yung buong unang row */
+  .edit-shop-profile-add-datetime-form > div:first-child {
+    grid-column: 1 / -1;
+  }
+
+  /* Yung Open, Close, Slots ay magkakatabi sa 2nd row */
+  
+  /* Yung Buttons (Item 5) ay sakupin din yung buong 3rd row */
+  .edit-shop-profile-add-datetime-form > div:last-child {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 768px) {
+    /* Sa mobile, 2 columns */
+  .edit-shop-profile-add-datetime-form {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+    /* Sa pinakamaliit na screen, 1 column na lang lahat */
+  .edit-shop-profile-add-datetime-form {
+    grid-template-columns: 1fr;
+  }
+}
+/* --- END NG BAGONG CSS --- */

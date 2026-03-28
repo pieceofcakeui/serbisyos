@@ -1,0 +1,12 @@
+Options -Indexes
+
+RewriteEngine On
+
+# Custom error pages
+ErrorDocument 403 /serbisyos/error.php?code=403
+ErrorDocument 404 /serbisyos/error.php?code=404
+ErrorDocument 500 /serbisyos/error.php?code=500
+
+# Force HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]

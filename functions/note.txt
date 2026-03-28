@@ -1,0 +1,8 @@
+cleanup_users.php ay to run automatic to delete 24 hrs. unverified users account.
+   - For VS Code para sa testing.
+      * run (php functions/cleanup_users.php)
+
+Sa Live Server (Kapag In-upload Mo Na): 
+   - web hosting, ise-setup ang Cron Job gamit ang command na 
+    (php /home/your_username/public_html/serbisyos/functions/cleanup_users.php)
+    para kusa itong tumakbo bawat oras.

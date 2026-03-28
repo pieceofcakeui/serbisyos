@@ -1,0 +1,116 @@
+Options -Indexes
+RewriteEngine On
+
+# Set the base directory for all rules
+RewriteBase /
+RewriteRule ^account/backend/ - [L]
+RewriteRule ^admin/backend/ - [L]
+RewriteRule ^home$ index.php [L]
+RewriteRule ^verify_otp_reset/?$ verify_otp_reset.php [L,QSA]
+RewriteRule ^verify_otp/?$ verify_otp.php [L,QSA]
+
+# --- CUSTOM ERROR PAGES ---
+ErrorDocument 403 /error.php?code=403
+ErrorDocument 404 /error.php?code=404
+ErrorDocument 500 /error.php?code=500
+
+# --- SEO & USER-FRIENDLY REWRITES ---
+# Public Access
+RewriteRule ^service(?:/([a-zA-Z0-9-]+))?/?$ service.php?slug=$1 [L,QSA]
+RewriteRule ^emergency-help(?:/([a-zA-Z0-9-]+))?/?$ emergency-help.php?service_slug=$1 [L,QSA]
+RewriteRule ^shop/([a-zA-Z0-9-]+)/?$ view_detail.php?shop=$1 [L,QSA]
+RewriteRule ^search(?:/([a-zA-Z0-9-]+))?/?$ search.php?service_slug=$1 [L,QSA]
+
+#Private Access
+RewriteRule ^account/emergency-help(?:/([a-zA-Z0-9-]+))?/?$ account/emergency-help.php?service_slug=$1 [L,QSA]
+RewriteRule ^account/service(?:/([a-zA-Z0-9-]+))?/?$ account/service.php?slug=$1 [L,QSA]
+RewriteRule ^account/search(?:/([a-zA-Z0-9-]+))?/?$ account/search.php?service_slug=$1 [L,QSA]
+RewriteRule ^account/shop/([a-zA-Z0-9-]+)/?$ account/view_details.php?shop=$1 [L,QSA]
+RewriteRule ^account/shop/([a-zA-Z0-9-]+)$ account/emergency-requests.php?shop=$1 [QSA,L]
+
+
+# --- EXCLUSIONS FOR BACKEND/AJAX SCRIPTS ---
+RewriteCond %{REQUEST_URI} !/account/inbox-backend/save_auto_messages\.php$ [NC]
+RewriteCond %{REQUEST_URI} !/account/inbox-backend/get_shop_id\.php$ [NC]
+RewriteCond %{REQUEST_URI} !/account/inbox-backend/get_unread_count\.php$ [NC]
+RewriteCond %{REQUEST_URI} !/account/inbox-backend/all_messages_send\.php$ [NC]
+RewriteCond %{REQUEST_URI} !/account/inbox-backend/fetch_messages\.php$ [NC]
+RewriteCond %{REQUEST_URI} !/account/inbox-backend/mark_as_read\.php$ [NC]
+RewriteCond %{REQUEST_URI} !/account/inbox-backend/update_reaction\.php$ [NC]
+RewriteCond %{REQUEST_URI} !/account/inbox-backend/check_activity\.php$ [NC]
+RewriteCond %{REQUEST_URI} !/account/inbox-backend/delete_conversation\.php$ [NC]
+
+RewriteCond %{REQUEST_URI} !/account/view-details-backend/store_automated_response\.php$ [NC]
+RewriteCond %{REQUEST_URI} !/account/view-details-backend/fetch_message\.php$ [NC]
+RewriteCond %{REQUEST_URI} !/account/view-details-backend/send_message\.php$ [NC]
+
+
+RewriteCond %{REQUEST_URI} !/account/backend/check_emergencies\.php$ [NC]
+RewriteCond %{REQUEST_URI} !/account/backend/submit_report\.php$ [NC]
+RewriteCond %{REQUEST_URI} !/account/backend/update_shop_settings\.php$ [NC]
+RewriteCond %{REQUEST_URI} !/account/backend/update-shop-profile\.php$ [NC]
+RewriteCond %{REQUEST_URI} !/account/backend/respond_to_review\.php$ [NC]
+RewriteCond %{REQUEST_URI} !/account/backend/edit_response\.php$ [NC]
+RewriteCond %{REQUEST_URI} !/account/backend/load_more_reviews\.php$ [NC]
+RewriteCond %{REQUEST_URI} !/account/backend/photos\.php$ [NC]
+RewriteCond %{REQUEST_URI} !/account/backend/brand-vehicle\.php$ [NC]
+RewriteCond %{REQUEST_URI} !/account/backend/update_shop_services\.php$ [NC]
+RewriteCond %{REQUEST_URI} !/account/backend/save_shop\.php$ [NC]
+RewriteCond %{REQUEST_URI} !/account/backend/delete_save_shop\.php$ [NC]
+RewriteCond %{REQUEST_URI} !/account/backend/search_shops\.php$ [NC]
+RewriteCond %{REQUEST_URI} !/account/backend/bookings\.php$ [NC]
+RewriteCond %{REQUEST_URI} !/account/backend/send-feedback\.php$ [NC]
+RewriteCond %{REQUEST_URI} !/account/backend/submit-message\.php$ [NC]
+RewriteCond %{REQUEST_URI} !/account/backend/process_emergency\.php$ [NC]
+RewriteCond %{REQUEST_URI} !/account/backend/review_likes\.php$ [NC]
+RewriteCond %{REQUEST_URI} !/account/backend/submit_review\.php$ [NC]
+RewriteCond %{REQUEST_URI} !/account/backend/submit_partner\.php$ [NC]
+RewriteCond %{REQUEST_URI} !/account/backend/update_emergency_request\.php$ [NC]
+RewriteCond %{REQUEST_URI} !/account/backend/hide_emergency_request\.php$ [NC]
+RewriteCond %{REQUEST_URI} !/account/backend/get_emergency_request\.php$ [NC]
+RewriteCond %{REQUEST_URI} !/account/backend/get_booking_details\.php$ [NC]
+RewriteCond %{REQUEST_URI} !/account/backend/update_booking_status\.php$ [NC]
+RewriteCond %{REQUEST_URI} !/account/backend/set_password-manual\.php$ [NC]
+RewriteCond %{REQUEST_URI} !/account/backend/update_password\.php$ [NC]
+RewriteCond %{REQUEST_URI} !/account/backend/2fa_setup\.php$ [NC]
+RewriteCond %{REQUEST_URI} !/account/backend/terminate_session\.php$ [NC]
+RewriteCond %{REQUEST_URI} !/account/backend/get_active_sessions\.php$ [NC]
+RewriteCond %{REQUEST_URI} !/account/backend/delete_account\.php$ [NC]
+RewriteCond %{REQUEST_URI} !/account/backend/fetch_shops\.php$ [NC]
+RewriteCond %{REQUEST_URI} !/account/backend/chat_history\.php$ [NC]
+RewriteCond %{REQUEST_URI} !/account/backend/gemini-proxy\.php$ [NC]
+RewriteCond %{REQUEST_URI} !/account/backend/store_nearby_location\.php$ [NC]
+
+RewriteCond %{REQUEST_URI} !/account/submit_for_verification\.php$ [NC]
+RewriteCond %{REQUEST_URI} !/account/process_data_request\.php$ [NC]
+RewriteCond %{REQUEST_URI} !/account/request_data\.php$ [NC]
+RewriteCond %{REQUEST_URI} !/account/fetch_automated_message\.php$ [NC]
+RewriteCond %{REQUEST_URI} !/account/fetch_message\.php$ [NC]
+RewriteCond %{REQUEST_URI} !/account/location_functions\.php$ [NC]
+
+
+RewriteCond %{REQUEST_URI} !^/functions/functions\.php$ [NC]
+RewriteCond %{REQUEST_URI} !^/functions/forgot-pass-email-verify\.php$ [NC]
+RewriteCond %{REQUEST_URI} !^/functions/reset_password\.php$ [NC]
+RewriteCond %{REQUEST_URI} !^/functions/enable_2fa\.php$ [NC]
+RewriteCond %{REQUEST_URI} !^/functions/disable_2fa\.php$ [NC]
+RewriteCond %{REQUEST_URI} !^/functions/verify_2fa\.php$ [NC]
+RewriteCond %{REQUEST_URI} !^/functions/verify_backup_code\.php$ [NC]
+RewriteCond %{REQUEST_URI} !^/functions/submit-message\.php$ [NC]
+
+RewriteCond %{REQUEST_URI} !^/admin/update_status\.php$ [NC]
+RewriteCond %{REQUEST_URI} !^/admin/backend/view_application\.php$ [NC]
+RewriteCond %{REQUEST_URI} !^/admin/backend/update_shop_location\.php$ [NC]
+
+# This rule removes .php from the URL bar
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s([^?]*?)\.php[\s?] [NC]
+RewriteRule ^ %1 [R=301,L]
+
+# This rule internally rewrites the request back to the .php file
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php [QSA,L]
+
+#7200 para sa 2 oras 
+php_value session.gc_maxlifetime 3600

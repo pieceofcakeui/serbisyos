@@ -1,0 +1,86 @@
+:root {
+    --bg-btn-color: #ffc107;
+    --bg-text: #ffffff;
+    --bg-hover: #ffca28;
+    --bg-color: #ffffff;
+    --danger-color: #e0352b;
+}
+
+.verify {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 100px;
+    padding: 20px;
+}
+
+#verify-form {
+    background: white;
+    max-width: 380px;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+#verify-form h2 {
+    color: black;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+#verify-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    text-align: left;
+    color: black;
+}
+
+#verify-form input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    text-align: center;
+    outline: none;
+    transition: border 0.3s ease-in-out;
+}
+
+#verify-form input:focus {
+    border-color: var(--bg-btn-color);
+}
+
+#verify-form button {
+    background: var(--bg-btn-color);
+    color: black;
+    border: none;
+    padding: 12px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 6px;
+    width: 100%;
+    transition: background 0.3s ease, transform 0.2s;
+}
+
+#verify-form p a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#verify-form p a:hover {
+    color: var(--bg-hover);
+    text-decoration: underline;
+}
+
+@media (max-width: 500px) {
+    #verify-form {
+        width: 90%;
+    }
+}

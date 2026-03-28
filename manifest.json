@@ -1,0 +1,22 @@
+{
+    "name": "Serbisyos",
+    "short_name": "Serbisyos",
+    "start_url": "/",
+    "scope": "/",
+    "display": "standalone",
+    "background_color": "#FFFFFF",
+    "theme_color": "#ffc107",
+    "description": "Find trusted auto repair shops near you.",
+    "icons": [
+{
+    "src": "/assets/img/serbisyos-logo-192.png",
+    "type": "image/png",
+    "sizes": "192x192"
+},
+{
+    "src": "/assets/img/serbisyos-logo-512.png",
+    "type": "image/png",
+    "sizes": "512x512"
+    }
+  ]
+}

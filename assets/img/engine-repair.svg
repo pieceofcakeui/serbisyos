@@ -1,0 +1,14 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="200" height="200" fill="#f0f0f0"/>
+  <!-- Engine Block -->
+  <rect x="40" y="50" width="120" height="100" fill="#333" rx="5"/>
+  <!-- Pistons -->
+  <circle cx="70" cy="80" r="15" fill="#666"/>
+  <circle cx="130" cy="80" r="15" fill="#666"/>
+  <!-- Gears -->
+  <circle cx="100" cy="120" r="20" fill="#888"/>
+  <path d="M100,100 L100,140 M80,120 L120,120" stroke="#444" stroke-width="8"/>
+  <!-- Text -->
+  <text x="100" y="180" text-anchor="middle" fill="#333" font-size="14">Engine Repair</text>
+</svg>

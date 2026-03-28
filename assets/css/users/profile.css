@@ -1,0 +1,440 @@
+body {
+    background-color: #f8fafc;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.profile-section {
+    padding: 80px 0;
+    margin-top: -60px;
+}
+
+.profile-layout {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.profile-sidebar {
+    background: white;
+    padding: 2rem;
+    border: 1px solid var(--border-color);
+    height: fit-content;
+}
+
+.profile-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.profile-picture {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.profile-header h4 {
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+
+.profile-header p {
+    color: #666;
+}
+
+.profile-nav .nav-link {
+    color: #333;
+    font-weight: 500;
+    padding: 0.75rem 1rem;
+    border-radius: 10px;
+    margin-bottom: 0.5rem;
+    text-align: left;
+}
+
+.profile-nav .nav-link i {
+    margin-right: 1rem;
+    width: 20px;
+    text-align: center;
+}
+
+.profile-nav .nav-link.active {
+    background-color: #ffc107;
+    color: #1a1a1a !important;
+}
+
+.profile-content {
+    background: white;
+    padding: 2.5rem;
+    border: 1px solid var(--border-color);
+}
+
+.profile-content h2 {
+    font-weight: 700;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 1rem;
+}
+
+.info-group {
+    margin-bottom: 1.5rem;
+}
+
+.info-group label {
+    font-weight: 600;
+    color: #666;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.info-group p {
+    font-size: 1.1rem;
+    color: #1a1a1a;
+}
+
+.info-group .placeholder-text {
+    font-size: 0.85rem;
+    color: #6c757d;
+    font-style: italic;
+}
+
+.review-item-container {
+    padding: 1.5rem 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.review-item-container:last-child {
+    border-bottom: none;
+}
+
+.review-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+
+.review-item:last-child {
+    border-bottom: none;
+}
+
+.review-item img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.owner-response {
+    background-color: #f8f9fa;
+    border-left: 4px solid #ffc107;
+    padding: 1rem 1rem 1rem 1.5rem;
+    border-radius: 0 8px 8px 0;
+}
+
+.owner-response h6 {
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+.owner-response .response-text {
+    font-style: italic;
+    color: #555;
+}
+
+.profile-nav-mobile {
+    display: none;
+}
+
+.shop-card {
+    background: white;
+    border-radius: 15px;
+    text-align: center;
+    padding: 1.5rem;
+    height: 100%;
+    position: relative;
+}
+
+.shop-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.shop-card h5 {
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.shop-card p {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.shop-card .btn-view {
+    background: #1a1a1a;
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.shop-card .btn-unfavorite {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: transparent;
+    border: none;
+    color: #ffc107;
+    font-size: 1.5rem;
+    padding: 0;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.shop-card .btn-unfavorite:hover {
+    color: #ffc107;
+}
+
+.saved-shop-item {
+    background: white;
+    border: 1px solid #e2e8f0;
+    padding: 1rem;
+    position: relative;
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease;
+}
+
+.saved-shop-logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.shop-details {
+    flex-grow: 1;
+}
+
+.shop-name-link {
+    text-decoration: none;
+    color: #1a1a1a;
+}
+
+.shop-name-link h5 {
+    font-weight: 600;
+}
+
+.shop-name-link:hover h5 {
+    color: #ffc107;
+}
+
+.saved-shop-item .btn-unfavorite {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: transparent;
+    border: none;
+    color: #ffc107;
+    font-size: 1.5rem;
+    padding: 0;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.setting-item {
+    padding: 1.5rem 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.setting-item:last-child {
+    border-bottom: none;
+}
+
+.setting-item h5 {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.setting-item p {
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.password-wrapper {
+    position: relative;
+}
+
+.password-wrapper .form-control {
+    padding-right: 40px;
+}
+
+.password-toggle {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #6c757d;
+}
+
+.form-profile-picture-container {
+    position: relative;
+    width: 120px;
+    height: 120px;
+}
+
+.form-profile-picture-container #profile-preview {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #f0f0f0;
+}
+
+.form-profile-picture-container .camera-icon {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    background-color: rgba(44, 44, 44, 0.7);
+    color: white;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: 2px solid white;
+    transition: background-color 0.3s;
+}
+
+.form-profile-picture-container .camera-icon:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+@media (max-width: 992px) {
+    .profile-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-sidebar {
+        box-shadow: none;
+        border: 1px solid #e2e8f0;
+    }
+
+    .profile-nav {
+        display: none !important;
+    }
+
+    .profile-nav-mobile {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 1.5rem;
+        border-top: 1px solid #f0f0f0;
+        padding-top: 1.5rem;
+    }
+
+    .profile-nav-mobile .nav-link {
+        font-weight: 600;
+        font-size: 1.1rem;
+        padding: 0;
+    }
+
+    .profile-nav-mobile .dropdown-menu {
+        width: 200px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .saved-shop-logo {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+}
+
+.toast-success {
+    background-color: #388e3c !important;
+    color: white !important;
+    border-radius: 10px !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    padding: 12px 16px;
+    position: fixed !important;
+    top: 20px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    z-index: 9999;
+    opacity: 1 !important;
+    text-align: center;
+    min-width: 250px;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.toast-error {
+    background-color: #d32f2f !important;
+    color: white !important;
+    border-radius: 10px !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    padding: 12px 16px;
+    position: fixed !important;
+    top: 20px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    z-index: 9999;
+    opacity: 1 !important;
+    text-align: center;
+    min-width: 250px;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.toast-success .toast-close-button,
+.toast-error .toast-close-button {
+    color: white !important;
+    text-shadow: none;
+    opacity: 1;
+    font-weight: bold;
+    font-size: 18px;
+    position: absolute;
+    right: 8px;
+    top: 8px;
+}
+
+.toast-success:before,
+.toast-error:before,
+.toast-info:before,
+.toast-warning:before {
+    display: none !important;
+}
+
+.toast-success .toast-message,
+.toast-error .toast-message,
+.toast-info .toast-message,
+.toast-warning .toast-message {
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+}
+
+#toast-container>div {
+    padding-left: 15px !important;
+}
+
+#toast-container .toast-success,
+#toast-container .toast-error,
+#toast-container .toast-info,
+#toast-container .toast-warning {
+    background-image: none !important;
+}

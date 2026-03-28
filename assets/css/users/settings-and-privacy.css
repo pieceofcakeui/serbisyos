@@ -1,0 +1,450 @@
+:root {
+    --primary-color: #ffc107;
+    --secondary-color: #e74c3c;
+    --accent-color: #f39c12;
+    --light-color: #ecf0f1;
+    --dark-color: #2c3e50;
+}
+
+body {
+    background: linear-gradient(135deg, #f5f7fa 70%, #e4e8f0 100%);
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+.settings-container {
+    max-width: 1200px !important;
+    margin: 2rem auto !important;
+    background: white !important;
+    border-radius: 10px !important;
+    border: 1px solid var(--border-color);
+    overflow: hidden !important;
+    margin-top: 10px !important;
+}
+
+.settings-tabs-container {
+    padding: 1rem 1rem 0 1rem;
+    border-bottom: 1px solid #dee2e6;
+    background-color: #fff;
+}
+
+.nav-tabs {
+    border-bottom: none;
+}
+
+.nav-tabs .nav-link {
+    color: #495057;
+    font-weight: 500;
+    border: none;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s ease;
+    padding: 0.75rem 1rem;
+}
+
+.nav-tabs .nav-link:hover {
+    border-bottom-color: #e9ecef;
+}
+
+.nav-tabs .nav-link.active {
+    color: var(--dark-color);
+    background-color: transparent;
+    border-color: transparent;
+    border-bottom-color: var(--primary-color);
+    font-weight: 600;
+}
+
+@media (max-width: 767.98px) {
+    .settings-tabs-container {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+
+    .settings-tabs-container::-webkit-scrollbar {
+        display: none;
+    }
+
+    .nav-tabs {
+        flex-wrap: nowrap;
+        white-space: nowrap;
+    }
+}
+
+
+.settings-content {
+    padding: 2rem !important;
+}
+
+.profile-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.profile-pic-container {
+    position: relative;
+    width: 80px !important;
+    height: 80px !important;
+    margin-bottom: 1rem;
+}
+
+.profile-pic-edit {
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 50% !important;
+    object-fit: cover !important;
+}
+
+.edit-icon {
+    position: absolute !important;
+    bottom: 0 !important;
+    right: 0 !important;
+    background: white !important;
+    border-radius: 50% !important;
+    width: 25px !important;
+    height: 25px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    cursor: pointer !important;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2) !important;
+}
+
+.profile-info h3 {
+    margin-top: 15px !important;
+    margin-bottom: 0.25rem !important;
+    color: var(--dark-color) !important;
+}
+
+.profile-info p {
+    color: #6c757d !important;
+    margin-bottom: 0 !important;
+    font-size: 16px !important;
+}
+
+.settings-card {
+    background: white !important;
+    border-radius: 8px !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05) !important;
+    padding: 1.5rem !important;
+    margin-bottom: 1.5rem !important;
+}
+
+.settings-card h5 {
+    color: #000000 !important;
+    margin-bottom: 1.25rem !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+.settings-card h5 i {
+    margin-right: 10px !important;
+    color: var(--accent-color) !important;
+}
+
+.btn-enable-2fa {
+    background-color: var(--secondary-color) !important;
+    border-color: var(--secondary-color) !important;
+    color: white !important;
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    text-decoration: none !important;
+}
+
+
+.btn-enable-2fa:hover {
+    background-color: #c0392b !important;
+    border-color: #c0392b !important;
+}
+
+.form-control:focus {
+    outline: none;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+}
+
+#passwordStrengthBar {
+    transition: all 0.4s !important;
+}
+
+.notification-settings .form-check {
+    margin-bottom: 1rem !important;
+}
+
+.notification-settings .form-check-label {
+    display: flex !important;
+    align-items: center !important;
+}
+
+.notification-settings .form-check-input {
+    margin-right: 10px !important;
+}
+
+.custom-back-btn {
+    background-color: none !important;
+    color: #333 !important;
+    border: none !important;
+}
+
+.custom-back-btn:hover {
+    background-color: none !important;
+}
+
+@media (max-width: 768px) {
+    .settings-content {
+        padding: 1.5rem 1rem !important;
+    }
+
+    .settings-container {
+        margin: 1rem !important;
+        border-radius: 0 !important;
+    }
+
+    .profile-header {
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    .profile-info h3 {
+        margin-top: -5px !important;
+        text-align: center !important;
+    }
+
+    .profile-pic-container {
+        margin-right: 0 !important;
+        margin-bottom: 1rem !important;
+        text-align: center !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .settings-container {
+        box-shadow: none !important;
+        border-radius: 0 !important;
+        margin: 0 !important;
+        margin-top: -15px !important;
+    }
+
+    .settings-card {
+        padding: 1rem !important;
+    }
+}
+
+#active-sessions-container .list-group-item {
+    padding: 1rem !important;
+    border-left: none !important;
+    border-right: none !important;
+    transition: all 0.2s !important;
+}
+
+#active-sessions-container .list-group-item:first-child {
+    border-top: none !important;
+}
+
+#active-sessions-container .list-group-item:hover {
+    background-color: #f8f9fa !important;
+}
+
+.device-icon {
+    width: 40px !important;
+    height: 40px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background-color: #f0f4ff !important;
+    border-radius: 8px !important;
+}
+
+.terminate-btn {
+    min-width: 90px !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 5px !important;
+}
+
+#logout-all-btn {
+    background-color: var(--secondary-color) !important;
+    border-color: var(--secondary-color) !important;
+    color: white !important;
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    text-decoration: none !important;
+
+}
+
+.btn-serbisyos {
+    background-color: var(--primary-color);
+    font-weight: 700;
+}
+
+.btn-disable-2fa {
+    background-color: var(--secondary-color) !important;
+    border-color: var(--secondary-color) !important;
+    color: white !important;
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    text-decoration: none !important;
+
+}
+
+#setPasswordModal .modal-content {
+    border: none !important;
+    border-radius: 12px !important;
+    overflow: hidden !important;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.15) !important;
+}
+
+#setPasswordModal .modal-header {
+    background-color: #f8f9fa !important;
+    border-bottom: 1px solid #eee !important;
+    padding: 1.5rem !important;
+}
+
+#setPasswordModal .modal-title {
+    font-family: 'Poppins', sans-serif !important;
+    font-weight: 600 !important;
+    color: #2c3e50 !important;
+    font-size: 1.5rem !important;
+}
+
+#setPasswordModal .modal-body {
+    padding: 2rem !important;
+}
+
+#setPasswordModal .btn-close {
+    font-size: 0.8rem !important;
+    padding: 0.5rem !important;
+    margin: -0.5rem -0.5rem -0.5rem auto !important;
+}
+
+#setPasswordModal .form-control {
+    padding: 0.75rem 1rem !important;
+    border: 1px solid #ddd !important;
+    border-radius: 6px !important;
+    transition: all 0.3s ease !important;
+}
+
+#setPasswordModal .form-control:focus {
+    border-color: #4a90e2 !important;
+    box-shadow: 0 0 0 0.25rem rgba(74, 144, 226, 0.25) !important;
+}
+
+#setPasswordModal label {
+    font-weight: 500 !important;
+    margin-bottom: 0.5rem !important;
+    display: block !important;
+    color: #495057 !important;
+}
+
+#setPasswordModal .btn-primary {
+    background-color: #ffc107 !important;
+    border: none !important;
+    padding: 0.75rem 1.5rem !important;
+    font-weight: 500 !important;
+    letter-spacing: 0.5px !important;
+    transition: all 0.3s ease !important;
+    width: 100% !important;
+    margin-top: 1rem !important;
+}
+
+#setPasswordModal .btn-primary:hover {
+    transform: translateY(-2px) !important;
+}
+
+#setPasswordModal .btn-primary:active {
+    transform: translateY(0) !important;
+}
+
+#setPasswordModal .password-strength {
+    margin-top: 0.5rem !important;
+    font-size: 0.85rem !important;
+    color: #6c757d !important;
+}
+
+#setPasswordModal .password-match {
+    margin-top: 0.5rem !important;
+    font-size: 0.85rem !important;
+}
+
+#setPasswordModal .password-input-group {
+    position: relative !important;
+}
+
+#setPasswordModal .password-toggle {
+    position: absolute !important;
+    right: 10px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    background: none !important;
+    border: none !important;
+    color: #6c757d !important;
+    cursor: pointer !important;
+    z-index: 2 !important;
+}
+
+#setPasswordModal .password-toggle:hover {
+    color: #4a90e2 !important;
+}
+
+@media (max-width: 768px) {
+    #setPasswordModal .modal-dialog {
+        margin: 0.5rem !important;
+    }
+
+    #setPasswordModal .modal-body {
+        padding: 1.5rem !important;
+    }
+
+    #setPasswordModal .modal-title {
+        font-size: 1.3rem !important;
+    }
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0 !important;
+        transform: translateY(-20px) !important;
+    }
+
+    to {
+        opacity: 1 !important;
+        transform: translateY(0) !important;
+    }
+}
+
+#setPasswordModal .modal-content {
+    animation: modalFadeIn 0.3s ease-out !important;
+}
+
+#setPasswordModal .btn-primary.loading {
+    position: relative !important;
+    pointer-events: none !important;
+}
+
+#setPasswordModal .btn-primary.loading::after {
+    content: "" !important;
+    position: absolute !important;
+    width: 20px !important;
+    height: 20px !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    margin: auto !important;
+    border: 3px solid transparent !important;
+    border-top-color: #ffffff !important;
+    border-radius: 50% !important;
+    animation: button-loading-spinner 1s ease infinite !important;
+}
+
+@keyframes button-loading-spinner {
+    from {
+        transform: rotate(0turn) !important;
+    }
+
+    to {
+        transform: rotate(1turn) !important;
+    }
+}

@@ -1,0 +1,90 @@
+.accountRequired-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-family: 'Montserrat', sans-serif;
+    justify-content: center;
+    align-items: center;
+}
+
+.accountRequired-modal-content {
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px 25px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 360px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+
+.accountRequired-close-modal {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.accountRequired-close-modal:hover {
+    color: #000;
+}
+
+.accountRequired-modal-title {
+    margin-top: 0;
+    color: #333;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.accountRequired-modal-body {
+    margin: 15px 0;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.accountRequired-modal-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.accountRequired-modal-btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    flex: 1;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+}
+
+.accountRequired-btn {
+    background-color: #ffc107;
+    color: white;
+}
+
+.accountRequired-btn:hover {
+    background-color: #ffb300;
+}
+
+.view-shop-message-shop-icon {
+    cursor: pointer;
+}
+
+.view-shop-message-shop-icon:hover {
+    opacity: 0.8;
+}

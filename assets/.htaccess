@@ -1,0 +1,5 @@
+Options -Indexes
+RewriteEngine On
+
+ErrorDocument 404 /serbisyos/error.php?code=404
+ErrorDocument 500 /serbisyos/error.php?code=500

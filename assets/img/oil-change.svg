@@ -1,0 +1,11 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="200" height="200" fill="#f0f0f0"/>
+  <!-- Oil Drop -->
+  <path d="M100,40 L120,70 Q120,120 100,120 Q80,120 80,70 Z" fill="#FFD700"/>
+  <!-- Oil Can -->
+  <path d="M60,90 L140,90 L130,160 L70,160 Z" fill="#333"/>
+  <rect x="90" y="70" width="20" height="20" fill="#333"/>
+  <!-- Text -->
+  <text x="100" y="180" text-anchor="middle" fill="#333" font-size="14">Oil Change</text>
+</svg>

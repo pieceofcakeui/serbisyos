@@ -1,0 +1,16 @@
+2025-11-03 12:08:14 - --- SCRIPT ACCESSED ---
+2025-11-03 20:08:14 - Request Method: POST
+2025-11-03 20:08:14 - Session User ID found: 270
+2025-11-03 20:08:14 - Raw data received: {"endpoint":"https://fcm.googleapis.com/fcm/send/cziJCrAuE_Q:APA91bF_JEA25Vs0nQ2fKCwSPDWrSXl92Rl5lKxKjv9NXI1Z7qbH3O39WfkqQeGV-J2yRuQJtUvAQtebJi39EtH_heN19xlbuH8TNdkyqIxnvb3GSOUjReTNY3Ua7Fay7w-6rScZvfIo","expirationTime":null,"keys":{"p256dh":"BF9C99Joa6X7XX0Q5Ln0j6espeGzr6AUp-8hpPKm-QUemjhaq9YtQDtSF1i58vYiVeTte6dqAEnygIkdZ3VrjjA","auth":"gPci2-Qwm-_BriQBHw4P_Q"}}
+2025-11-03 20:08:14 - JSON data decoded successfully.
+2025-11-03 20:08:14 - Subscription data is complete. Endpoint: https://fcm.googleapis.com/fcm/send/cziJCrAuE_Q:APA91bF_JEA25Vs0nQ2fKCwSPDWrSXl92Rl5lKxKjv9NXI1Z7qbH3O39WfkqQeGV-J2yRuQJtUvAQtebJi39EtH_heN19xlbuH8TNdkyqIxnvb3GSOUjReTNY3Ua7Fay7w-6rScZvfIo
+2025-11-03 20:08:14 - Subscription not found. Attempting to insert new one...
+2025-11-03 20:08:14 - SUCCESS: New subscription saved to database for user_id: 270
+2025-11-03 12:12:26 - --- SCRIPT ACCESSED ---
+2025-11-03 20:12:26 - Request Method: POST
+2025-11-03 20:12:26 - Session User ID found: 270
+2025-11-03 20:12:26 - Raw data received: {"endpoint":"https://fcm.googleapis.com/fcm/send/djjv54v4Qck:APA91bGRH_tDc6DG3JE6qJuoFGjOGtcJDRUDCqjcm0GKUCsnACmVAJA7cipM_xdWN006nVe1ZELpRm8b4RlaKk8ptVlz6m1hD3j1fzQC7nqbuQ8JhZhz3yDrb_2_hfqN-S6ZO2yb5JL1","expirationTime":null,"keys":{"p256dh":"BCTAHOJCGtgpBlEQeipMzW5dzcsZeQS6MKYqIaLZh-eS1mh3hhF8gt7vdrLIPoPPBy2oLqTxqIXzFwxeHGBVbrY","auth":"YhMPCKKUCsf3f7VIapglkQ"}}
+2025-11-03 20:12:26 - JSON data decoded successfully.
+2025-11-03 20:12:26 - Subscription data is complete. Endpoint: https://fcm.googleapis.com/fcm/send/djjv54v4Qck:APA91bGRH_tDc6DG3JE6qJuoFGjOGtcJDRUDCqjcm0GKUCsnACmVAJA7cipM_xdWN006nVe1ZELpRm8b4RlaKk8ptVlz6m1hD3j1fzQC7nqbuQ8JhZhz3yDrb_2_hfqN-S6ZO2yb5JL1
+2025-11-03 20:12:26 - Subscription not found. Attempting to insert new one...
+2025-11-03 20:12:26 - SUCCESS: New subscription saved to database for user_id: 270
