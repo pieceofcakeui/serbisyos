@@ -2,7 +2,7 @@
 
 Serbisyos.com is an online automotive service platform in the Philippines that connects vehicle owners with trusted auto repair shops, mechanics, and roadside assistance providers.
 
-The platform is currently focused on serving **Iloilo Province**, covering cities and municipalities within the area including Iloilo City, Pavia, Santa Barbara, Oton, Leganes, Pototan, and surrounding areas.
+The platform is currently focused on serving **Iloilo Province**, covering cities and municipalities.
 
 The platform is designed to make car maintenance and vehicle repair easier, faster, and more accessible through digital tools and smart automotive support features.
 
@@ -243,6 +243,7 @@ Our mission is to modernize the automotive service experience in the Philippines
 - Car air-conditioning services
 - Towing and roadside assistance
 - Motorcycle repair services
+- And many more...
 
 ---
 
