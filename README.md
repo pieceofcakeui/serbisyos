@@ -57,11 +57,29 @@ The chatbot can:
 ---
 
 ## 📍 Find Nearby Auto Shops
-Search for repair shops based on:
-- Location
-- Service type
-- Vehicle issue
-- Ratings and reviews
+
+### 🔍 Search Options
+Users can search for repair shops using:
+- **Shop Name** — directly search by the name of the repair shop
+- **Location** — search by city, barangay, or area
+- **Service Type** — filter by the type of service needed (e.g., oil change, brake repair, tire replacement)
+
+### 🎛️ Filters
+Users can narrow down search results using the following filters:
+- **Ratings & Reviews** — filter shops by customer star ratings (e.g., 4 stars and above)
+- **Service Type** — show only shops that offer a specific service
+- **Location** — filter by distance or specific area
+
+### 📌 Nearby Shops Button
+A **"Nearby Shops"** button is available on the search page.
+
+When clicked:
+- The platform detects the user's **current location**
+- Automatically suggests repair shops **within 10 kilometers** of the user
+- Results are sorted by distance (nearest first)
+- Each result shows the shop name, distance, rating, and available services
+
+> 📍 Location access permission is required for the Nearby Shops feature to work.
 
 ---
 
