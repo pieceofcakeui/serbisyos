@@ -241,7 +241,7 @@ Our mission is to modernize the automotive service experience in the Philippines
 - Car air-conditioning services
 - Towing and roadside assistance
 - Motorcycle repair services
-
+- And many more...
 ---
 
 # 👨‍🔧 For Auto Repair Shops
