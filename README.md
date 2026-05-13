@@ -12,16 +12,46 @@ The platform is designed to make car maintenance and vehicle repair easier, fast
 Browse and discover trusted automotive repair shops and mechanics near your location.
 
 ## 🤖 AI Chatbot Diagnosis Assistant
-Users can interact with an intelligent chatbot that helps identify possible vehicle problems based on symptoms and issues described by the customer.
+Users can interact with an intelligent chatbot that helps identify possible vehicle problems based on symptoms, issues, or images shared by the customer.
 
 ### Example Questions:
 - "Bakit ayaw mag-start ng kotse ko?"
 - "May tunog sa preno kapag nagbe-brake."
 - "Nag-overheat yung makina."
 
+### 🖼️ Image Recognition
+Users can send photos of automotive tools, car parts, or vehicle issues directly in the chat.
+
+The chatbot can:
+- Identify automotive tools (e.g., torque wrench, OBD scanner, jack stand)
+- Identify car parts and components from images
+- Diagnose visible vehicle problems based on photos (e.g., worn brake pads, damaged tires, leaking fluid)
+- Suggest repair actions based on what is seen in the image
+
+### Example Image Inputs:
+- Photo of an unknown tool → Chatbot identifies it and explains its use
+- Photo of a worn tire → Chatbot recommends replacement and nearby shops
+- Photo of a car engine warning light → Chatbot explains the possible cause
+
+---
+
+### 🚫 Topic Limitation
+The chatbot is strictly focused on automotive-related topics only.
+
+If a user sends a question or image that is **not related to vehicles, car repair, automotive tools, or road assistance**, the chatbot will politely decline and redirect the conversation.
+
+#### Example Response for Off-Topic Questions:
+> "Sorry, I can only assist with automotive-related topics such as car repair, vehicle diagnosis, tools, and road assistance. For other concerns, please contact the appropriate service. 😊"
+
+The chatbot will not assist with:
+- General knowledge questions unrelated to vehicles
+- Non-automotive images
+- Topics outside of car, motorcycle, or vehicle services
+
 The chatbot can:
 - Suggest possible causes
 - Recommend repair actions
+- Identify tools and parts from images
 - Help users find nearby repair shops related to the issue
 
 ---
