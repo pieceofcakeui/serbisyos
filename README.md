@@ -2,7 +2,7 @@
 
 Serbisyos.com is an online automotive service platform in the Philippines that connects vehicle owners with trusted auto repair shops, mechanics, and roadside assistance providers.
 
-The platform is currently focused on serving **Iloilo Province**, covering cities and municipalities.
+The platform is currently focused on serving **Iloilo Province**, covering all cities and municipalities within the area.
 
 The platform is designed to make car maintenance and vehicle repair easier, faster, and more accessible through digital tools and smart automotive support features.
 
@@ -140,7 +140,9 @@ To improve security and trust within the platform, users are required to verify 
 
 # 🤝 Become a Partner
 
-Auto repair shop owners and mechanics can join Serbisyos.com through the **Become a Partner** program.
+Auto repair shop owners and mechanics located in **Iloilo Province** can join Serbisyos.com through the **Become a Partner** program.
+
+> ⚠️ **Iloilo Province Only** — Partner registration is currently limited to auto repair shops operating within Iloilo Province. Applications from shops outside Iloilo may be rejected during the review process.
 
 Partners can:
 - Register their repair shop
@@ -152,8 +154,10 @@ Partners can:
 ## Partner Registration Process
 1. Click **Become a Partner**
 2. Fill out the registration form
-3. Submit business information and requirements
+3. Submit business information and requirements including shop location
 4. Wait for account approval and verification
+
+> ❌ Applications from shops located **outside Iloilo Province** will be reviewed and may be **rejected** by the admin.
 
 ---
 
@@ -243,7 +247,6 @@ Our mission is to modernize the automotive service experience in the Philippines
 - Car air-conditioning services
 - Towing and roadside assistance
 - Motorcycle repair services
-- And many more...
 
 ---
 
