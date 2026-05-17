@@ -1,6 +1,6 @@
 # Serbisyos.com
 
-Serbisyos.com is an online automotive service platform in the Philippines that connects vehicle owners with trusted auto repair shops, mechanics, and roadside assistance providers.
+Serbisyos.com is an online automotive directory service platform in the Philippines that connects vehicle owners with trusted auto repair shops, mechanics, and roadside assistance providers.
 
 The platform is currently focused on serving **Iloilo Province**, covering all cities and municipalities within the area.
 
